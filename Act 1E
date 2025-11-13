@@ -1,0 +1,31 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	float promedio = 0;
+	float suma_total = 0;
+	int mayor_al_promedio = 0;
+	int vector[4];
+	cout << "Este programa ve las alturas de las personas" << endl;
+	cout << endl;
+	for(int i = 0; i < 5; i++)
+	{
+		cout << "Ingrese la altura (en centimetros): ";
+		cin >> vector[i];
+		suma_total = suma_total + vector[i];
+	}
+	cout << endl;
+	promedio = suma_total / 5;
+	for(int j; j < 5; j++)
+	{
+		if(vector[j] > promedio)
+		{
+			mayor_al_promedio = mayor_al_promedio + 1;
+		}
+	}
+	cout << "El promedio total de las alturas es de: " << promedio << " centimetros" << endl;
+	cout << "Las personas con una altura mayor al promedio es de: " << mayor_al_promedio;
+	return 0;
+}
